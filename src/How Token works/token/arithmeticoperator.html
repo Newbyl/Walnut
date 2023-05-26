@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>arithmeticoperator.java</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <h1>ArithmeticOperator.java</h1>
+    </header>
+
+    <section>
+        <h1>Act()</h1>
+    
+        <p>
+            Checks if the expression stack S has enough expressions to match the arity of the Operator. If so, it unstacks one (named b) or two expressions (named b and a) depending on the arity of the operator.
+            It then operates differently depending on the types of the unstacked expressions: 
+
+            If the operator is "_" (unary minus) and b is of type:
+            <ul>
+                <li>Number Literal : Changes the literal to its opposite, add a "-" before its name and changes its value to the opposite and adds it to the expression Stack S </li>
+                <li>Alphabet Letter : Changes the value of the letter to its opposite and adds it to the expression Stack S</li>
+                <li>Word : It applies the operator on the automaton of the Word and adds it to the expression Stack S</li>
+            </ul>
+            If the operator's arity is 2 ( "+", "-", "*", "/" ), and a and b are of type :
+            <ul>
+                <li>Word and Word : Applies the operator using both automaton W of words and concatenates their M automaton and adds the indentifiers of b to the ones of a.Then adds a to S</li>
+                <li>Word and (Alphabet Letter or Number Literal) : Applies the operator to the W automaton of Word and the constant. Adds the Word to the expression Stack S</li>
+                <li>Both are (Alphabet Letter or Number Literal) : Adds to the stack of expression S a String which represents the formula : a operator b</li>
+            </ul>
+            If it is another combination, it creates a new expression which is a string representing "(a operator b)" with an automaton associated then adds it to the expression stack S. 
+
+        </p>
+    </section>
+
+    <footer><p>Previous : <a href="../token.html">Token.java</a></p></footer>
+
+</body>
+</html>

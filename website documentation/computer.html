@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Computer.java</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+		<h1>Computer.java</h1>
+	</header>
+
+    <section>
+        <h1>The calculations</h1>
+        Creates an instance of Predicate using the predicate(String) parameter of the constructor.
+        This instance initializes and applies matchers (regex) in order to ensure that the predicate is well written (e.g. no missing variables after an operator)
+        when it is finished, the computer instance applies the compute() method, this method :
+        Owns and manages an expression stack and a list of tokens in postfix annotation
+        Applies to each token the act() function. This function acts on the Expression stack, depending on the stack and the token it can be : an addition of variables, an operation on variables, the application of a function on variables etc...
+        Calculates the execution time
+        Displays the statistics (execution time, number of states of the automaton)
+        Create an automaton if the last expression of the stack is of type Automaton which will then be drawn and written by the previous class.
+    </section>
+
+    <section>
+        <h1>Example of computation :</h1>
+        <p>If I enter the command : "debug test "x+y=5";</p>
+        <p>
+            Reading the token : x type : Variable
+        </br>
+            expression stack : [x]
+        </br>
+        </br>
+            Reading the token : y type : Variable
+        </br>
+            expression stack : [x, y]
+        </br>
+    </br>
+            Reading the token : +_msd_2 type : ArithmeticOperator
+        </br>
+            expression stack : [(x+y)]
+        </br>
+    </br>
+            Reading the token : 5 type : NumberLiteral
+        </br>
+            expression stack : [(x+y), 5]
+        </br>
+            computed ~:1 states - 25ms
+            computed ~:2 states - 2ms
+        </br>
+    </br>
+            Reading the token : =_msd_2 type : RelationalOperator
+            expression : [(x+y)=5]</p></p>
+    </section>
+
+    <footer><p>Next : <a href="predicate.html">Predicate.java</a></p><p>Previous : <a href="prover.html">Prover.java</a></p> <p>Home : <a href="index.html">Home</a></p> </footer>
+
+</body>
+</html>

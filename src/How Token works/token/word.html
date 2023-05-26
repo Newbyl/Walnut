@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>word.java</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Word.java</h1>
+    </header>
+
+    <section>
+        <h1>Act()</h1>
+    
+        <p>
+            Checks if the expression stack S has enough expressions to match the number of indices, then creates a temporary expression stack to
+            store it.Creates an automaton M which will be used to have the final result and two lists of strings identifiers and quantifiers . Then it loops through the expressions in the temporary stack from the top to the bottom.
+            For each expression, it operates differently depending on the type of the expression.
+            <ul>
+                <li>Variable : Adds the variable to the identifiers list, if the variable is already in, creates a new identifier for the variable.</li>
+                <li>Arithmetic : Extracts the Automaton bound to the expression and concatenates it to the M automaton. The quantifiers and identifiers of the automaton from the expression are also added to the previous lists.</li>
+                <li>Automaton : Concatenates the automaton to M. If it is possible, adds its identifiers to the previous lists, otherwise, it throws an Exception.</li>
+                <li>Number Literal : Creates an automaton which accepts the value of the literal and concatenates it to M. Also adds the identifiers and quantifiers of the number literal to the previous lists.</li>
+            </ul>
+            At the end of the loop, it binds the extracted identifiers to W and it adds a new Expression to the stack S.
+        </p>
+    </section>
+
+    <section>
+        <h1>Put()</h1>
+        <p>Add the token to List<Token> postOrder which contains the postfix notation.</p>
+    </section>
+
+    <footer><p>Previous : <a href="../token.html">Token.java</a></p></footer>
+
+</body>
+</html>

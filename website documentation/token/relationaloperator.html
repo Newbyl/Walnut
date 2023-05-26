@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>relationaloperator.java</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+		<h1>RelationalOperator.java</h1>
+	</header>
+
+    <section>
+        <h1>Act()</h1>
+        <p>Various cases : </p>
+        <ul>
+            <li>If a and b are both number or letter literals, the method constructs a new expression by concatenating them with the given operator and creates a finite automaton that matches the evaluation of the expression. This new expression is then stacked on the stack S.</li>
+            <li>If a and b are a combination of word and arithmetic/variable, the method constructs a finite automaton that corresponds to the evaluation of the expression using the "comparison" method of "number_system" which returns a finite automaton representing the comparison of the two expressions according to the given operator. </li>
+            <li>If a is a number or letter literal and b is of type arithmetic/variable, the method creates a finite automaton representing the comparison between the literal and the expression b, also using the finite automaton corresponding to the expression b.</li>
+            <li>If a is of type arithmetic/variable and b is a number or letter literal, the method creates a finite automaton representing the comparison between the expression a and the literal, also using the finite automaton corresponding to the expression a.</li>
+            <li>If a and b are both of type word, the method creates a finite automaton representing the comparison between the two words, also using the finite automata corresponding to the expressions a and b to build the final automaton.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h1>Put()</h1>
+        <p>Add the token to List<Token> postOrder which contains the postfix notation.</p>
+    </section>
+
+    <footer><p>Previous : <a href="../token.html">Token.java</a></p></footer>
+
+</body>
+</html>

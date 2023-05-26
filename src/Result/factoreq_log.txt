@@ -1,0 +1,5 @@
+k<n:2 states - 14ms
+ T[(i+k)]=T[(j+k)]:8 states - 15ms
+  (k<n=>T[(i+k)]=T[(j+k)]):17 states - 5ms
+   (A k (k<n=>T[(i+k)]=T[(j+k)])):14 states - 55ms
+Total computation time: 107ms.

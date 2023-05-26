@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>logicaloperator.java</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+		<h1>LogicalOperator.java</h1>
+	</header>
+
+    <section>
+        <h1>Act()</h1>
+        <p>Acts differently depending on the logical operator processed:
+
+            <ul>
+                <li>For the quantifiers A, E, I, S: we call the actQuantifier() function. This method implements the processing of universal and existential quantifiers (symbolized by the letters "A" and "E" respectively) for a formal language. Processing these quantifiers requires finding all sets of quantified variables and then applying the appropriate operator on a regular expression.
+
+                    The code starts by unstacking the S-stack and storing the scrolled expressions in a temporary "temp" stack. It then checks that the stored expressions are indeed variables if it is a universal quantifier or a regular expression if it is an existential quantifier. The variables are stored in a list of strings "list_of_identifiers_to_quantify", which then allow to specify the quantified variables.
+                    
+                    If the operator is "E", the regular expression M is quantified for the identified variables. If the operator is "A", a negation of the regular expression M is performed, followed by the quantization of M on the identified variables, then a new negation. If the operator is "I", M is simplified by removing unnecessary variables, then an infinite regular expression is generated from M.
+                    
+                    Finally, the complete expression is stored in the stack S and the method returns a string describing the operation performed.</li>
+
+                <li>Else, If the operator is a binary operator, two expressions are unpacked from the stack. If the two expressions are finite automata (Type.automaton), the binary operation is applied (and, or, xor, imply, iff) by calling the appropriate method on the automaton. The result is then stacked on the stack as a new expression. If one or both expressions are not finite automata, an exception is thrown.
+
+                    Finally, the method checks if the print option is enabled and if so, it displays the output of the method in the console. </li>
+            </ul>
+
+            </p>
+    </section>
+
+    <section>
+        <h1>Put()</h1>
+        <p>Add the token to List<Token> postOrder which contains the postfix notation.</p>
+    </section>
+
+    <footer><p>Previous : <a href="../token.html">Token.java</a></p></footer>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>function.java</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Function.java</h1>
+    </header>
+
+    <section>
+        <h1>Act()</h1>
+    
+        <p>
+            Checks if the Expression Stack S has enough expressions to match the arity of the Function. Creates a temporary stack to store the expressions unstacked from S.
+            Also creates a List of Expressions args and two Lists of String indentifiers and quantify.A is an automaton which represents the function.
+            Then loops on every expression in the temporary stack and if the expression is of type : 
+            <ul>
+                <li>Variable : Adds the variable to an identifier list, if the variable is already in, creates a new identifier for the variable</li>
+                <li>Arithmetic :  Extracts the Automaton bound to the expression and concatenates it to the M automaton. The quantifiers and identifiers of the extracted automaton from the expression are also added to the identifiers and quantify lists</li>
+                <li>Number Literal : Creates an automaton which accepts the value of the literal and concatenates it to M. Also adds the identifiers and quantifiers of the number literal to the corresponding lists</li>
+                <li>Automaton : Concatenates the automaton to M. If it is possible, adds its identifiers to the identify list otherwise it throws and Exception.</li>
+            </ul>
+            At the end of the loop, it binds the extracted identifiers to A, concatenates A to M and adds a new Expression  to the stack S.
+            
+        </p>
+    </section>
+
+    <footer><p>Previous : <a href="../token.html">Token.java</a></p></footer>
+
+</body>
+</html>

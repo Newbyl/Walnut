@@ -1,0 +1,7 @@
+i=((2*a)+b):3 states - 1ms
+ j=((2*c)+b):3 states - 0ms
+  (i=((2*a)+b)&j=((2*c)+b)):9 states - 1ms
+   (E c (i=((2*a)+b)&j=((2*c)+b))):7 states - 1ms
+    (E b (E c (i=((2*a)+b)&j=((2*c)+b)))):12 states - 2ms
+     (E a (E b (E c (i=((2*a)+b)&j=((2*c)+b))))):2 states - 1ms
+Total computation time: 9ms.

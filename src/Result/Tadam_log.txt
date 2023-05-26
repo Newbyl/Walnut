@@ -1,0 +1,2 @@
+(S k sync(k))):4 states - 21ms
+Total computation time: 37ms.

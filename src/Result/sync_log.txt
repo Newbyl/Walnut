@@ -1,0 +1,4 @@
+(factoreq(i,j,k))=>parite(i,j))):19 states - 2ms
+ (A j (factoreq(i,j,k))=>parite(i,j)))):6 states - 2ms
+  (A i (A j (factoreq(i,j,k))=>parite(i,j))))):4 states - 1ms
+Total computation time: 9ms.
