@@ -3,7 +3,7 @@ Refactorisation of https://github.com/jono1202/Walnut for school project
 
 ## What is new ?
 ---
-In the src folder you will find [this version](https://github.com/jono1202/Walnut) of walnut with changes:
+In the src folder you will find [this version](https://github.com/jono1202/Walnut) of walnut with the following changes:
 
 - Better CLI with autocompletion, memory of previous command and the ability to modify your command easily using JLine3.0.
 - Added a symmbol `S` which is the smaller value that suits a predicate.
