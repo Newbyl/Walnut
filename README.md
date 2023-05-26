@@ -9,7 +9,7 @@ In the src folder you will find [this version](https://github.com/jono1202/Walnu
 - Added a symmbol `S` which is the smaller value that suits a predicate.
 
 
-In the website documentation folder you will find a website that explain in depth how Walnut treats a formula and the Token system.
+In the website documentation folder you will find a website that explain in depth how Walnut treats a formula and the Token system. Open the index.html file.
 
 ---
 This work was done by Raphael SALEH KASEM, Loic MESTAIS, Mugilan RAGAVAN and Nabyl QUIGNON for the "Study and Research work" project at Orleans University.
